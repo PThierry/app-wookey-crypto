@@ -403,6 +403,9 @@ int _main(uint32_t task_id)
      * In order to ensure that smart has not been corrupted and that the user
      * has validated his passphrase, we ask pin to confirm this state.
      *******************************************/
+
+    sys_sleep(50, SLEEP_MODE_DEEP);
+
     size = sizeof(struct sync_command);
     ipc_sync_cmd_data.magic = MAGIC_AUTH_STATE_PASSED;
     ipc_sync_cmd_data.state = SYNC_WAIT;
